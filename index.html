@@ -7,7 +7,7 @@ https://themeforest.net/licenses
 
 <html class="no-js" lang="en">
 <head>
-    <meta https-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
     <!-- Page Title Here -->
@@ -45,24 +45,38 @@ https://themeforest.net/licenses
             overflow-y: hidden; /* Disable vertical scrolling */
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Center content vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
         }
         #s-about-us .content {
             max-height: 100%; /* Ensure content fits within section */
+            margin: auto; /* Balance margins for centering */
+            text-align: center; /* Ensure text alignment */
+            flex: 1; /* Allow content to stretch if needed */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         /* Logo styling for perfect circle */
         img[src="logo.jpg"] {
-            
+            width: 100px; /* Fixed width */
+            height: 100px; /* Equal height for square container */
             border-radius: 10%; /* Circular shape */
             object-fit: cover; /* Ensure image fills circle without distortion */
-            
+            animation: spin 10s linear infinite; /* Continuous 360-degree spin */
+        }
+        /* Override inline logo styles in header */
+        header.header-top img[src="logo.jpg"] {
+            width: 80px !important;
+            height: 80px !important;
+            border-radius: 10% !important;
         }
         @keyframes spin {
             from {
                 transform: rotate(0deg);
             }
             to {
-                transform: rotate(360deg);
+                
             }
         }
         /* Responsive text for smaller devices */
@@ -127,7 +141,7 @@ https://themeforest.net/licenses
 <header class="header-top">
     <div class="logo">
         <a href="#home">
-            <img  src="logo.jpg" width="80px" style="border-radius: 20%;" height="80px" alt="Wenstech Software Solutions Logo">
+            <img src="logo.jpg" width="80px" style="border-radius: 10%;" height="80px" alt="Wenstech Software Solutions Logo">
         </a>
     </div>
     <div class="menu clearfix">
@@ -219,7 +233,7 @@ https://themeforest.net/licenses
         <section class="content">
             <header class="p-title">
                 <h3>About Us<i class="ion ion-android-information"></i></h3>
-                <h2><span style="font-size:2.4rem">let's</span><span class="bold">DO-IT</span><span style="font-size:2.4rem"></span></h2>
+                <h2><span style="font-size:2.4rem">unlock</span><span class="bold">INFINITE</span><span style="font-size:2.4rem">possibilities</span></h2>
             </header>
             <article class="text">
                 <p>We offer the following services:</p>
@@ -353,7 +367,6 @@ https://themeforest.net/licenses
                                     <h4>Call</h4>
                                     <p>+254769525570</p>
                                 </li>
-                               
                                 <li>
                                     <h4>Email</h4>
                                     <p><a href="mailto:wenstech383@gmail.com">wenstech383@gmail.com</a></p>
@@ -393,9 +406,7 @@ https://themeforest.net/licenses
 <footer class="page-footer">
     <span style="float:right">Wenstech Software Solutions</span>
     <br/>
-    <!-- <span style="float:right">COMING SOON</span> -->
-    <br/>
-    <span style="float:right"><a href="#">wenstech383@gmail.com</a></span>
+    <span style="float:right"><a href="mailto:wenstech383@gmail.com">wenstech383@gmail.com</a></span>
 </footer>
 <!-- End of site footer -->
 
