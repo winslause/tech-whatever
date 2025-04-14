@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wenstech Software Solutions</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- GSAP and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            background: #0a0a23;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: #00d4ff;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            margin-left: 10px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        nav ul li i {
+            color: #00d4ff;
+            font-size: 1.2rem;
+        }
+
+        /* Slideshow */
+        .slideshow {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            background: #0a0a23;
+        }
+
+        .slide h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            color: #00d4ff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #00d4ff;
+        }
+
+        .slide p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            line-height: 1.5;
+            color: #ccc;
+        }
+
+        .slide ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .slide ul li {
+            font-size: 1rem;
+            margin: 10px 0;
+            color: #ccc;
+        }
+
+        /* Background Effects */
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1600585154347-be6161a56a0c') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        /* Slideshow Dots */
+        .slideshow-dots {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: #ccc;
+            border-radius: 50%;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .dot.active {
+            background: #00d4ff;
+            box-shadow: 0 0 5px #00d4ff;
+        }
+
+        /* Bottom Right Text */
+        .footer-text {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 0.8rem;
+            color: #666;
+            text-align: right;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .slide h1 {
+                font-size: 2rem;
+            }
+
+            .slide p, .slide ul li {
+                font-size: 0.9rem;
+            }
+
+            nav .logo, nav ul li a {
+                font-size: 0.9rem;
+            }
+
+            .footer-text {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">WENSTECH SOFTWARE SOLUTIONS</div>
+        <ul>
+            <li><i class="fas fa-home"></i><a href="#home">Home</a></li>
+            <li><i class="fas fa-info-circle"></i><a href="#about-us">About Us</a></li>
+            <li><i class="fas fa-handshake"></i><a href="#partners">Partners</a></li>
+            <li><i class="fas fa-envelope"></i><a href="#contact-us">Contact Us</a></li>
+            <li><i class="fas fa-cogs"></i><a href="#services">Services</a></li>
+        </ul>
+    </nav>
+
+    <!-- Slideshow -->
+    <div class="slideshow">
+        <div class="slide" id="home">
+            <h1>Unlock Infinite Possibilities</h1>
+            <p>Wenstech Software Solutions delivers cutting-edge AI, web, mobile, and cloud services to empower your business with innovative technology.</p>
+        </div>
+        <div class="slide" id="about-us">
+            <h1>About Us</h1>
+            <p>Wenstech Software Solutions is a leading tech provider specializing in AI and machine learning, web and mobile development, and cloud services. We are committed to driving innovation for businesses worldwide.</p>
+        </div>
+        <div class="slide" id="partners">
+            <h1>Our Partners</h1>
+            <p>We collaborate with top industry leaders to deliver exceptional solutions. (Partner logos or names can be added here.)</p>
+        </div>
+        <div class="slide" id="contact-us">
+            <h1>Contact Us</h1>
+            <p>Reach out to us at info@wenstechsoft.com or call us at +1-800-WENSTECH. Let’s build the future together!</p>
+        </div>
+        <div class="slide" id="services">
+            <h1>Our Services</h1>
+            <ul>
+                <li><strong>AI & Machine Learning:</strong> Predictive analytics and automation.</li>
+                <li><strong>Web Development:</strong> Custom, responsive websites.</li>
+                <li><strong>Mobile Development:</strong> High-performance iOS and Android apps.</li>
+                <li><strong>Cloud Services:</strong> Scalable, secure cloud solutions.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slideshow Dots -->
+    <div class="slideshow-dots">
+        <div class="dot active" data-slide="0"></div>
+        <div class="dot" data-slide="1"></div>
+        <div class="dot" data-slide="2"></div>
+        <div class="dot" data-slide="3"></div>
+        <div class="dot" data-slide="4"></div>
+    </div>
+
+    <!-- Bottom Right Text -->
+    <div class="footer-text">
+        <p>Wenstech Software Solutions</p>
+        <p>Wenstech Software Solutions, Tech City, USA</p>
+    </div>
+
+    <!-- JavaScript for Slideshow -->
+    <script>
+        $(document).ready(function() {
+            const slides = $('.slide');
+            const dots = $('.dot');
+            let currentSlide = 0;
+
+            // Show the first slide
+            gsap.to(slides.eq(currentSlide), { opacity: 1, duration: 1 });
+
+            // Cascade Transition Function
+            function transitionToSlide(nextSlide) {
+                // Animate out current slide
+                gsap.to(slides.eq(currentSlide), { opacity: 0, duration: 1 });
+
+                // Update current slide
+                currentSlide = nextSlide;
+
+                // Update dots
+                dots.removeClass('active');
+                dots.eq(currentSlide).addClass('active');
+
+                // Animate in new slide with cascade effect
+                gsap.fromTo(slides.eq(currentSlide),
+                    { opacity: 0, backgroundColor: '#f0f0f0' },
+                    { opacity: 1, backgroundColor: '#0a0a23', duration: 1.5, ease: 'power2.out' }
+                );
+            }
+
+            // Automatic Slideshow
+            function nextSlide() {
+                const next = (currentSlide + 1) % slides.length;
+                transitionToSlide(next);
+            }
+
+            // Run slideshow every 5 seconds
+            setInterval(nextSlide, 5000);
+
+            // Navigation Click Handlers
+            $('nav a').on('click', function(e) {
+                e.preventDefault();
+                const targetId = $(this).attr('href').substring(1);
+                const targetIndex = slides.index($(`#${targetId}`));
+                if (targetIndex !== currentSlide) {
+                    transitionToSlide(targetIndex);
+                }
+            });
+
+            // Dot Click Handlers
+            $('.dot').on('click', function() {
+                const targetIndex = parseInt($(this).data('slide'));
+                if (targetIndex !== currentSlide) {
+                    transitionToSlide(targetIndex);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

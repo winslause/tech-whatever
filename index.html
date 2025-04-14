@@ -1,0 +1,420 @@
+<!doctype html>
+<!--
+COPYRIGHT by HighHay/Mivfx
+Before using this theme, you should accept themeforest licenses terms.
+http://themeforest.net/licenses
+-->
+
+<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <!-- Page Title Here -->
+    <title>Wenstech Software Solutions</title>
+    
+    <!-- Disable screen scaling-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+    <!-- Initializer -->
+    <link rel="stylesheet" href="http://wenstech-website.oss-cn-beijing.aliyuncs.com/css/normalize.css">
+
+    <!-- Web fonts and Web Icons -->
+    <link rel="stylesheet" href="http://wenstech-website.oss-cn-beijing.aliyuncs.com/css/pageloader.css">
+    <link rel="stylesheet" href="http://wenstech-website.oss-cn-beijing.aliyuncs.com/fonts/opensans/stylesheet.css">
+    <link rel="stylesheet" href="http://wenstech-website.oss-cn-beijing.aliyuncs.com/fonts/asap/stylesheet.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/ionicons/1.5.2/css/ionicons.min.css">
+
+    <!-- Vendor CSS style -->
+    <link rel="stylesheet" href="http://wenstech-website.oss-cn-beijing.aliyuncs.com/css/foundation.min.css">
+    <link rel="stylesheet" href="http://wenstech-website.oss-cn-beijing.aliyuncs.com/js/vendor/jquery.fullPage.css">
+    <link rel="stylesheet" href="http://wenstech-website.oss-cn-beijing.aliyuncs.com/js/vegas/vegas.min.css">
+
+    <!-- Main CSS files -->
+    <link rel="stylesheet" href="http://wenstech-website.oss-cn-beijing.aliyuncs.com/css/main.css">
+    <link rel="stylesheet" href="http://wenstech-website.oss-cn-beijing.aliyuncs.com/css/main_responsive.css">
+    <link rel="stylesheet" href="http://wenstech-website.oss-cn-beijing.aliyuncs.com/css/style-font1.css">
+
+    <!-- Inline CSS for About Us, logo, and responsiveness -->
+    <style>
+        #s-about-us {
+            height: 100vh; /* Full viewport height */
+            overflow-y: hidden; /* Disable vertical scrolling */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+        }
+        #s-about-us .content {
+            max-height: 100%; /* Ensure content fits within section */
+        }
+        /* Logo styling for perfect circle */
+        img[src="logo.jpg"] {
+            
+            border-radius: 20%; /* Circular shape */
+            object-fit: cover; /* Ensure image fills circle without distortion */
+            
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        /* Responsive text for smaller devices */
+        @media screen and (max-width: 480px) {
+            #s-about-us .p-title h2 {
+                font-size: 1.8rem; /* Smaller base font size */
+            }
+            #s-about-us .p-title h2 span[style*="font-size:2.4rem"] {
+                font-size: 1.4rem !important; /* Adjust smaller spans */
+            }
+            #s-about-us .p-title h2 span.bold {
+                font-size: 1.6rem; /* Slightly larger for emphasis */
+            }
+            #s-about-us .text p,
+            #s-about-us .text ul {
+                font-size: 0.9rem; /* Smaller text for services */
+            }
+            #s-about-us .text ul {
+                padding-left: 15px; /* Adjust padding for compactness */
+            }
+            img[src="logo.jpg"] {
+                width: 80px; /* Smaller logo on mobile */
+                height: 80px;
+            }
+        }
+        @media screen and (max-width: 320px) {
+            #s-about-us .p-title h2 {
+                font-size: 1.5rem;
+            }
+            #s-about-us .p-title h2 span[style*="font-size:2.4rem"] {
+                font-size: 1.2rem !important;
+            }
+            #s-about-us .p-title h2 span.bold {
+                font-size: 1.4rem;
+            }
+            #s-about-us .text p,
+            #s-about-us .text ul {
+                font-size: 0.8rem;
+            }
+            img[src="logo.jpg"] {
+                width: 60px; /* Even smaller for tiny screens */
+                height: 60px;
+            }
+        }
+    </style>
+
+    <script src="http://wenstech-website.oss-cn-beijing.aliyuncs.com/js/vendor/modernizr-2.7.1.min.js"></script>
+</head>
+<body id="menu" class="alt-bg">
+<!--[if lt IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Page Loader -->
+<div class="page-loader" id="page-loader">
+    <div><i class="ion ion-loading-d"></i>
+        <p>loading</p></div>
+</div>
+
+<!-- BEGIN OF site header Menu -->
+<header class="header-top">
+    <div class="logo">
+        <a href="#home">
+            <img  src="logo.jpg" width="80px" style="border-radius: 20%;" height="80px" alt="Wenstech Software Solutions Logo">
+        </a>
+    </div>
+    <div class="menu clearfix">
+        <a href="#about-us">About Us</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+</header>
+<!-- END OF site header Menu-->
+
+<!-- BEGIN OF Quick nav icons at left -->
+<nav class="quick-link count-4 nav-left">
+    <ul id="qmenu">
+        <li data-menuanchor="home">
+            <a href="#home" class=""><i class="icon ion ion-home"></i></a>
+            <span class="title">Home</span>
+        </li>
+        <li data-menuanchor="about-us">
+            <a href="#about-us"><i class="icon ion ion-android-information"></i></a>
+            <span class="title">About Us</span>
+        </li>
+        <li data-menuanchor="register">
+            <a href="#register"><i class="icon ion ion-compose"></i></a>
+            <span class="title">Partners</span>
+        </li>
+        <li data-menuanchor="contact">
+            <a href="#contact"><i class="icon ion ion-android-call"></i></a>
+            <span class="title">Contact Us</span>
+        </li>
+    </ul>
+</nav>
+<!-- END OF Quick nav icons at left -->
+
+<!-- BEGIN OF site cover -->
+<div class="page-cover" id="home">
+    <!-- Cover Background -->
+    <div class="cover-bg pos-abs full-size bg-img" data-image-src="http://wenstech-website.oss-cn-beijing.aliyuncs.com/img/bg1.jpg"></div>
+
+    <!-- BEGIN OF Slideshow Background -->
+    <div class="cover-bg pos-abs full-size slide-show">
+        <i class='img' data-src='https://www.shutterstock.com/image-photo/hand-touching-high-tech-global-600nw-2323228599.jpg'></i>
+        <i class='img' data-src='https://img.freepik.com/premium-photo/ai-machine-learning-business-management-concept-futuristic-hologram-artificial-intelligence-digital-humanoid-head-assistant-service-icons-human-hand-dark-background-with-copy-space_36367-8220.jpg'></i>
+        <i class='img' data-src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbm1YSDg2NUBKxJNf_z01spIZg0_oM4g9TsQ&s'></i>
+        <i class='img' data-src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcG7yKc3DoLaorrRjwbAl6mEMjrr7_CERnzSGUwhDTPo0AoHobFg25jacQKTNUzwSQfQ&usqp=CAU'></i>
+    </div>
+    <!-- END OF Slideshow Background -->
+
+    <!-- Solid color as filter or as background -->
+    <div class="cover-bg pos-abs full-size bg-color" data-bgcolor="rgba(51, 2, 48, 0.12)"></div>
+</div>
+<!--END OF site Cover -->
+
+<!-- BEGIN OF site main content -->
+<main class="page-main" id="mainpage">
+
+    <!-- Begin of home page -->
+    <div class="section page-home page page-cent" id="s-home">
+        <!-- Logo -->
+        <div class="logo-container">
+            <img class="h-logo" src="logo.jpg" alt="Wenstech Software Solutions Logo">
+        </div>
+        <!-- Content -->
+        <section class="content">
+            <header class="header">
+                <div class="h-left">
+                    <h2><strong>Wenstech</strong></h2>
+                </div>
+                <div class="h-right">
+                    <h3>Advanced<br>Solutions</h3>
+                    <h4 class="subhead"><a>For Your Business Needs</a></h4>
+                </div>
+            </header>
+        </section>
+
+        <!-- Scroll down button -->
+        <footer class="p-footer p-scrolldown">
+            <a href="#about-us">
+                <div class="arrow-d">
+                    <div class="before">About</div>
+                    <div class="after">Us</div>
+                    <div class="circle"></div>
+                </div>
+            </a>
+        </footer>
+    </div>
+    <!-- End of home page -->
+
+    <!-- Begin of about us page -->
+    <div class="section page-about page page-cent" id="s-about-us">
+        <section class="content">
+            <header class="p-title">
+                <h3>About Us<i class="ion ion-android-information"></i></h3>
+                <h2><span style="font-size:2.4rem">Unlock</span><span class="bold">Infinite</span><span style="font-size:2.4rem">Possibilities</span></h2>
+            </header>
+            <article class="text">
+                <p>We offer the following services:</p>
+                <ul style="list-style: disc; padding-left: 20px;">
+                    <li><strong>AI & Machine Learning:</strong> Advanced algorithms for predictive analytics and automation.</li>
+                    <li><strong>Web Development:</strong> Custom, responsive websites tailored to your needs.</li>
+                    <li><strong>Mobile Development:</strong> High-performance iOS and Android apps.</li>
+                    <li><strong>Cloud Services:</strong> Scalable, secure cloud solutions for your business.</li>
+                </ul>
+            </article>
+        </section>
+        <footer class="p-footer p-scrolldown">
+            <a href="#register">
+                <div class="arrow-d">
+                    <div class="before">Our</div>
+                    <div class="after">Partners</div>
+                    <div class="circle"></div>
+                </div>
+            </a>
+        </footer>
+    </div>
+    <!-- End of about us page -->
+
+    <!-- Begin of timer page -->
+    <div class="section page-when page page-cent" id="s-when" style="display:none;">
+        <section class="content">
+            <div class="clock clock-countdown">
+                <div class="site-config"
+                     data-date="10/31/2019 23:00:00"
+                     data-date-timezone="+0"
+                ></div>
+                <header class="header">
+                    Project <strong>Cases</strong>
+                </header>
+                <div class="elem-left">
+                    <div class="digit hours">00</div>
+                    <div class="text">hrs</div>
+                </div>
+                <div class="elem-center">
+                    <span class="text top"><img class="img" alt="Logo" src="logo.jpg"></span>
+                    <div class="digit days">000</div>
+                    <div class="text">days</div>
+                </div>
+                <div class="elem-right">
+                    <div class="digit minutes">00</div>
+                    <div class="text">min</div>
+                </div>
+
+                <!-- second knob here -->
+                <div class="second">
+                    <input class="knob container"
+                           id="second-knob"
+                           data-width="400"
+                           data-height="400"
+                           data-displayInput=false
+                           data-fgColor="#fff"
+                           data-bgColor="rgba(255,255,255,0)"
+                           data-thickness=".07"
+                           value="0"
+                           data-displayPrevious=true
+                           data-max="6000"
+                    />
+                </div>
+            </div>
+        </section>
+        <footer class="p-footer p-scrolldown">
+            <a href="#register">
+                <div class="arrow-d">
+                    <div class="before">Our</div>
+                    <div class="after">Partners</div>
+                    <div class="circle"></div>
+                </div>
+            </a>
+        </footer>
+    </div>
+    <!-- End of timer page -->
+
+    <!-- Begin of register page -->
+    <div class="section page-register page page-cent" id="s-register">
+        <section class="content">
+            <header class="p-title">
+                <h3>Partners<i class="ion ion-compose"></i></h3>
+            </header>
+            <div>
+                <form id="mail-subscription" class="form magic send_email_form" method="get"
+                      action="ajaxserver/serverfile.php">
+                    <p class="invite center">Please, write your email below to stay in touch with us:</p>
+                    <div class="fields clearfix">
+                        <div class="input">
+                            <label for="reg-email">Email</label>
+                            <input id="reg-email" class="email_f" name="email" type="email" required
+                                   placeholder="your@email.address" data-validation-type="email"></div>
+                        <div class="buttons">
+                            <button id="submit-email" class="button email_b" name="submit_email">Ok</button>
+                        </div>
+                    </div>
+                    <p class="email-ok invisible"><strong>Thank you</strong> for your subscription. We will inform you.</p>
+                </form>
+            </div>
+        </section>
+        <footer class="p-footer p-scrolldown">
+            <a href="#contact">
+                <div class="arrow-d">
+                    <div class="before">Contact</div>
+                    <div class="after">Us</div>
+                    <div class="circle"></div>
+                </div>
+            </a>
+        </footer>
+    </div>
+    <!-- End of register page -->
+
+    <!-- Begin of Contact page -->
+    <div class="section page-contact page page-cent" id="s-contact">
+        <!-- Begin of contact information -->
+        <div class="slide" id="information" data-anchor="information">
+            <section class="content">
+                <header class="p-title">
+                    <h3>Contact Us<i class="ion ion-location"></i></h3>
+                </header>
+                <!-- Begin Of Page SubSection -->
+                <div class="contact">
+                    <div class="row">
+                        <div class="medium-6 columns left">
+                            <ul>
+                                <li>
+                                    <h4>Location Address</h4>
+                                    <p>Coming soon</p>
+                                </li>
+                                <li>
+                                    <h4>Call</h4>
+                                    <p>+254769525570</p>
+                                </li>
+                                <li>
+                                    <h4>WhatsApp</h4>
+                                    <p>+254769525570</p>
+                                </li>
+                                <li>
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:wenstech383@gmail.com">wenstech383@gmail.com</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="medium-6 columns social-links right">
+                            <ul>
+                                <li class="show-for-medium-up">
+                                    <h4>Website</h4>
+                                    <p><a href="http://www.wenstechsoft.com">www.wenstechsoft.com</a></p>
+                                </li>
+                                <li>
+                                    <p><img src="logo.jpg" alt="Wenstech Software Solutions Logo" class="logo"></p>
+                                    <p class="small">All rights reserved 2025</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of page SubSection -->
+            </section>
+        </div>
+        <!-- end of contact information -->
+
+        <!-- begin of contact message -->
+        <div class="slide" id="message" data-anchor="message">
+        </div>
+        <!-- End of contact message -->
+    </div>
+    <!-- End of Contact page -->
+
+</main>
+<!-- END OF site main content -->
+
+<!-- Begin of site footer -->
+<footer class="page-footer">
+    <span style="float:right">Wenstech Software Solutions</span>
+    <br/>
+    <span style="float:right">COMING SOON</span>
+    <br/>
+    <span style="float:right"><a href="#">wenstech383@gmail.com</a></span>
+</footer>
+<!-- End of site footer -->
+
+<!-- All Javascript plugins goes here -->
+<script src="http://wenstech-website.oss-cn-beijing.aliyuncs.com/js/vendor/jquery-1.11.2.min.js"></script>
+<!-- All vendor scripts -->
+<script src="http://wenstech-website.oss-cn-beijing.aliyuncs.com/js/vendor/all.js"></script>
+
+<!-- Downcount JS -->
+<script src="http://wenstech-website.oss-cn-beijing.aliyuncs.com/js/jquery.downCount.js"></script>
+
+<!-- Form script -->
+<script src="http://wenstech-website.oss-cn-beijing.aliyuncs.com/js/form_script.js"></script>
+
+<!-- Javascript main files -->
+<script src="http://wenstech-website.oss-cn-beijing.aliyuncs.com/js/main.js"></script>
+
+</body>
+</html>
